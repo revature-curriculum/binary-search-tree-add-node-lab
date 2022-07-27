@@ -1,7 +1,9 @@
 // The purpose of this code segment is to provide test code for the insertKey() method in BinarySearchTreeAddNode.
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.Before;
+import org.junit.After;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 
 public class BinarySearchTreeAddNodeTest {

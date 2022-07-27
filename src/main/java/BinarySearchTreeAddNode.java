@@ -60,7 +60,7 @@ Place the recursive code in InsertRecursive.
 Alternately, you may choose to implement insertKey iteratively by deleting the
 InsertRecursive method and placing iterative code in the insertKey method.
 
-Also, an inOrder method has been provided to print out the tree "in-order" as 
+Also, an inorder method has been provided to print out the tree "in-order" as 
 described above, for debugging/testing purposes.
 
 Test cases are provided.
