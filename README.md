@@ -66,25 +66,9 @@ When we delete a node from the BST, then there are three possibilities as discus
 
 # Instructions:
 
-A BinarySearchTree class is set up in BinarySearchTree.java. The implementation is as follows:
-
-Within the BinarySearchTree class is a subclass Node defined as:
-
-class Node { 
-        int key; 
-        Node left, right; 
-}
-
-An object instantiated from the BinarySearchTree class consists (publicly) as follows:
-  Member:
-    Node root
-  Methods:
-    void insertKey(int)
-    void deleteKey(int)
-    boolean search(int)
-    void inOrder(void)
-
-The implementations for insertKey, deleteKey, search, and inOrder are recursive with corresponding internal methods (for example, for insertKey there is an empty method called insert_Recursive). Fill in the recursive code to implement the methods above.
-
-## Testing
-Test cases are provided in Replit.
+- Implement the method for inserting a value into the Binary Search Tree.
+- The implementation is recursive; the method insertKey simply calls InsertRecursive.
+  - Place the recursive code in InsertRecursive.
+- Alternately, you may choose to implement insertKey iteratively by deleting the InsertRecursive method and placing iterative code in the insertKey method.
+- Also, an inorder method has been provided to print out the tree "in-order" as described above, for debugging/testing purposes.
+- Test cases are provided.
