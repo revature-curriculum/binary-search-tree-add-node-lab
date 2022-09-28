@@ -1,7 +1,7 @@
 compile = "javac -classpath .:target/dependency/* -d . $(find . -type f -name '*.java')"
-run = ["java", "-classpath", ".:target/dependency/*", "BinarySearchTreeAddNode"]
+run = ["java", "-classpath", ".:target/dependency/*", "BSTInsetion"]
 
-entrypoint = "src/main/BinarySearchTreeAddNode.java"
+entrypoint = "src/main/BSTInsetion.java"
 hidden = ["**/main/*.class"]
 
 [packager]
