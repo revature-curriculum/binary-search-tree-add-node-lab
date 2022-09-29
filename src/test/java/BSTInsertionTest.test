@@ -1,0 +1,74 @@
+import org.junit.Before;
+import org.junit.After;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+
+public class BSTInsertionTest {
+
+static String str = "";
+BSTInsertion.Node root;
+static void inorder(BSTInsertion.Node temp){
+    if (temp == null)
+        return;
+
+    inorder(temp.left);
+    Integer num = new Integer(temp.key);
+    String nod = Integer.toString(num);
+    str = str+nod+" ";
+    inorder(temp.right);
+}
+
+@Before
+public void setUp() {
+str = "";
+        root = new BSTInsertion.Node(5);
+        root.right = new BSTInsertion.Node(7);
+        root.left = new BSTInsertion.Node(2);
+        root.right.right = new BSTInsertion.Node(8);
+        root.right.left = new BSTInsertion.Node(6);
+        root.left.right = new BSTInsertion.Node(3);
+        root.left.left = new BSTInsertion.Node(1);
+        root.left.left.right = new BSTInsertion.Node(4);
+}
+
+@Test
+public void InsertDuplicateValueTest() {
+    BSTInsertion.insert(root, 5);
+  inorder(root);
+  String ans ="1 4 2 3 5 5 6 7 8 ";
+  
+  assertEquals(ans,str);
+
+}
+
+@Test
+public void Insert2NodesTest() {
+  BSTInsertion.insert(root, 0);
+  BSTInsertion.insert(root, 13);
+
+  int ans1 = root.left.left.left.key;
+  int ans2 = root.right.right.right.key;
+  
+  assertEquals(ans1,0);
+  assertEquals(ans2,13);
+}
+
+@Test
+public void NewNodeTest() {
+  BSTInsertion.insert(root, 12);
+  int ans = root.right.right.right.key;
+  
+  assertEquals(ans,12);
+
+}
+
+@Test
+public void InsertTest() {
+  BSTInsertion.insert(root, 12);
+  inorder(root);
+  String ans ="1 4 2 3 5 6 7 8 12 ";
+  
+  assertEquals(ans,str);
+
+}

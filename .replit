@@ -1,7 +1,7 @@
 compile = "javac -classpath .:target/dependency/* -d . $(find . -type f -name '*.java')"
-run = ["java", "-classpath", ".:target/dependency/*", "BSTInsetion"]
+run = ["java", "-classpath", ".:target/dependency/*", "BSTInsertion"]
 
-entrypoint = "src/main/BSTInsetion.java"
+entrypoint = "src/main/BSTInsertion.java"
 hidden = ["**/main/*.class"]
 
 [packager]
